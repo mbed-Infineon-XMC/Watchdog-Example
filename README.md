@@ -5,6 +5,11 @@
 * Check out this tutorial which descibes how you can write your own librarys. [LINK](https://os.mbed.com/cookbook/Writing-a-Library)
 * An XMC Watchdog library is available here: [LINK](https://github.com/mbed-Infineon-XMC/XMCWatchdog-Library.git)
 
+The watchdog timer is configured to 5s. If the wd.service() is not called at least once during this period, the watchdog timer will reset the microcontroller.
+In this example wd.service() is called every second. (LED 2 blink)
+If button2 is pressed the wadchdog timer expired because wd.service() is no longer called and the XMC will reset after 5 seconds.
+At the next start the XMC ckecks with wd.watchdogCauseReset() if the watchdog timer was the cause of reset an LED1 turns on.
+
 ## Step 1: Download mbed CLI
 
 * [Mbed CLI](https://docs.mbed.com/docs/mbed-os-handbook/en/latest/dev_tools/cli/#installing-mbed-cli) - Download and install mbed CLI.
