@@ -1,8 +1,8 @@
 # Watchdog Example
 
 * The following guide describes how you can use the watchdog timer on the XMC.
-* The wadchdog timer is not supported by default from mbed. So this guide also shows how you can write classes to support XMC hardware which has no mbed support.
-* Check out this tutorial which descibes how you can write your own librarys. [LINK](https://os.mbed.com/cookbook/Writing-a-Library)
+* The watchdog timer is not supported by default from mbed. So this guide shows how you can write classes to support specific XMC hardware which is not supported by mbed.
+* Check out this tutorial, which descibes how you can write your own mbed library. [LINK](https://os.mbed.com/cookbook/Writing-a-Library)
 * An XMC Watchdog library is available here: [LINK](https://github.com/mbed-Infineon-XMC/XMCWatchdog-Library.git)
 
 The watchdog timer is configured to 5s. If wd.service() is not called at least once during this period, the watchdog timer will reset the microcontroller.
